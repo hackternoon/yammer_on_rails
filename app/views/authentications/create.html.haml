@@ -1,0 +1,31 @@
+%h1 app/views/authentications/create.html.haml
+%a(href='/welcome/index') /welcome/index
+%br/
+%br/
+%a(href='/auth/developer') /auth/developer
+%br/
+%br/
+Information from omniauth is displayed below:
+%br/
+%br/
+= debug @auth_hash
+%br/
+%br/
+- if @new_user == true
+  This is a new user.
+- else
+  This is an existing user.
+%br/
+%br/
+Information from @authentication is displayed below:
+%br/
+%br/
+= debug @authentication
+%br/
+%br/
+Information from @user is displayed below:
+%br/
+%br/
+= debug @user
+%br/
+%br/

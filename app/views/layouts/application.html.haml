@@ -1,0 +1,23 @@
+%html
+  %head
+    %title Yammer API demo
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    #links
+      %a(href='/welcome/index') /welcome/index
+      %a(href='/auth/yammer') /auth/yammer
+      %a(href='/yammer/client') /yammer/client 
+      %a(href='/yammer/method_list') /yammer/method_list
+      I use this link to
+      %br/
+      check on omniauth:
+      %a(href='/auth/developer') /auth/developer
+      %hr/
+    #maincontent
+      =yield
+    :css
+      #links {background-color: #ddd; display: inline; float: left; padding: 9px; margin: 5px; }
+      #links a { display: block; padding-bottom: 9px;}
+      #maincontent {background-color: #eee; float: left; padding: 9px; margin: 5px; }

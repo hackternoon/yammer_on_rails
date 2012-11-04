@@ -1,0 +1,13 @@
+%h1 Yammer#method_list
+%p Find me in app/views/yammer/method_list.html.haml
+%hr/
+
+- @method_list.each do |meth|
+  - case
+  - when meth.class == String
+    %a(href="/yammer/client_method/#{meth}") /yammer/client_method/#{meth}
+  - when meth.class == Array
+    %a(href="/yammer/client_method/#{meth[0]}/#{meth[1]}") /yammer/client_method/#{meth[0]}/#{meth[1]}
+
+  %br/
+  %br/

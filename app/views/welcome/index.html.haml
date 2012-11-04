@@ -1,0 +1,45 @@
+%h1 Welcome#index
+%p Find me in app/views/welcome/index.html.haml
+%hr/
+
+This is a simple demo of the Yammer API.
+%br/
+%br/
+I start the demo by asking you to ensure that you have 2 env variables set.
+%br/
+%br/
+They need to be set inside the shell which started this Rails instance:
+%br/
+%br/
+YAMMER_KEY and YAMMER_SECRET
+%br/
+%br/
+I got the values to these variables from this URL: 
+%br/
+%a(href='https://www.yammer.com/client_applications/new') https://www.yammer.com/client_applications/new
+%br/
+%br/
+If the variables are set you should see them below:
+%br/
+%br/
+YAMMER_KEY: #{ENV['YAMMER_KEY']}
+%br/
+%br/
+YAMMER_SECRET: #{ENV['YAMMER_SECRET']}
+%br/
+%br/
+Next, I ask you to click open another tab and use it to login to Yammer.
+%br/
+%br/
+Then, click on this link:
+%br/
+%br/
+%a(href='/auth/yammer') /auth/yammer
+%br/
+%br/
+Then click on this link to go further into this demo:
+%br/
+%br/
+%a(href='/yammer/client') /yammer/client
+%br/
+%br/

@@ -1,0 +1,39 @@
+%h1 Yammer#client
+%p Find me in app/views/yammer/client.html.haml
+%hr/
+
+After you authenticate, I get Yammer data for you via an object called @yammer_client
+%br/
+%br/
+Here is the call I use to create @yammer_client:
+%br/
+%br/
+
+@yammer_client = Yammer.new(
+%br/
+parse_response: true,
+%br/
+oauth_token: session[:oauth_token],
+%br/
+consumer_key: ENV['YAMMER_KEY'],
+%br/
+consumer_secret: ENV['YAMMER_SECRET']
+%br/
+)
+
+%br/
+%br/
+Notice that I need an oauth_token to make the above call.
+I got that token during authentication (in the authentications_controller.rb) and stored it in the session-hash.
+%br/
+%br/
+Instead of storing it in the session-hash I could have stored it in the DB.
+%br/
+%br/
+Here is a list of methods I can send to @yammer_client:
+%br/
+%br/
+=debug @yammer_client.methods
+%br/
+%br/
+

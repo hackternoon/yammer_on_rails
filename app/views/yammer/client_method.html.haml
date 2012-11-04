@@ -1,0 +1,33 @@
+%h1 Yammer#client_method
+%p Find me in app/views/yammer/client_method.html.haml
+%hr/
+
+The purpose of this page is to display ouptut from a method sent to a yammer client.
+%br/
+%br/
+
+You will find a list of methods at this path:
+%br/
+%a(href='/yammer/client') /yammer/client
+%br/
+%br/
+Some of the methods are exposed to you as a clickable link at this path:
+%br/
+%a(href='/yammer/method_list') /yammer/method_list
+%br/
+%br/
+You are currently looking at this path:
+%br/
+%a(href='#{request.path}') #{request.path}
+%br/
+%br/
+Here is the params hash:
+%br/
+%br/
+= debug params
+%br/
+%br/
+Output from the method, #{params[:ymeth]}, sent to @yammer_client is displayed below in YAML format:
+%br/
+%br/
+= debug @output
