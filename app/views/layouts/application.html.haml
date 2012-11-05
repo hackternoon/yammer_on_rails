@@ -1,3 +1,4 @@
+!!! 5
 %html
   %head
     %title Yammer API demo
@@ -6,6 +7,7 @@
     = csrf_meta_tags
   %body
     #links
+      %img(src='/assets/ytrain.jpeg')
       %a(href='/welcome/index') /welcome/index
       %a(href='/auth/yammer') /auth/yammer
       %a(href='/yammer/client') /yammer/client 
@@ -18,6 +20,6 @@
     #maincontent
       =yield
     :css
-      #links {background-color: #ddd; display: inline; float: left; padding: 9px; margin: 5px; }
+      #links { background-color: #ddd; display: inline; float: left; padding: 9px; margin: 5px; }
       #links a { display: block; padding-bottom: 9px;}
-      #maincontent {background-color: #eee; float: left; padding: 9px; margin: 5px; }
+      #maincontent { background-color: #eee; float: left; padding: 9px; margin: 5px; }
