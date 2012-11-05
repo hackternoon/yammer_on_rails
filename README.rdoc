@@ -21,8 +21,6 @@ mkdir -p tmp/
 
 cd tmp/
 
-git clone https://github.com/hackternoon/yammer_on_rails.git
-or
 git clone git://github.com/hackternoon/yammer_on_rails.git
 
 cd yammer_on_rails
