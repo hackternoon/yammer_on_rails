@@ -13,6 +13,7 @@ https://www.yammer.com/client_applications/new
 Place your YAMMER_KEY and YAMMER_SECRET in your shell environment like this:
 
 export YAMMER_KEY=whatever
+
 export YAMMER_SECRET=itis
 
 cd ~
