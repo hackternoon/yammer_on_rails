@@ -27,6 +27,8 @@ cd yammer_on_rails
 
 bundle install
 
+bin/rake db:migrate
+
 script/rails s
 
 Start a browser
