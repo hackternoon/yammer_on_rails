@@ -39,3 +39,8 @@ Login to the network with corresponds to YAMMER_KEY=whatever
 
 Visit localhost:3000
 
+If you have enhancement requests or issues let me know:
+
+http://github.com/hackternoon/yammer_on_rails/issues
+
+dan@hackternoon.com
