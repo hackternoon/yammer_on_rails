@@ -74,6 +74,9 @@ class YammerController < ApplicationController
   def method_list
   end # def
 
+  def yammer_request
+  end # def
+
   private
 
   def new_client

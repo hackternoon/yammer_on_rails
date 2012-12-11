@@ -3,6 +3,7 @@ Yam::Application.routes.draw do
   get "yammer/method_list"
   get "yammer/client_method/:ymeth" => 'yammer#client_method'
   get "yammer/client_method/:ymeth/:ymeth_arg" => 'yammer#client_method2'
+  get 'yammer/request' => 'yammer#yammer_request'
 
   get "welcome/index"
   root :to => 'welcome#index'
