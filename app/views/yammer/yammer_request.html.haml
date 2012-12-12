@@ -3,3 +3,11 @@
 %hr/
 
 %a(href="/yammer/client_method/find_by_id/1489916317") /yammer/client_method/find_by_id/1489916317
+%br/
+=form_tag('request',method: 'get') do
+  #{'/yammer/client_method/find_by_id/'}
+  =text_field_tag :the_id
+  =submit_tag 'send GET request'
+
+= debug @output
+
