@@ -4,6 +4,7 @@ Yam::Application.routes.draw do
   get "yammer/client_method/:ymeth" => 'yammer#client_method'
   get "yammer/client_method/:ymeth/:ymeth_arg" => 'yammer#client_method2'
   get 'yammer/request' => 'yammer#yammer_request'
+  get 'yammer/open_graph' => 'yammer#yammer_open_graph'
 
   get "welcome/index"
   root :to => 'welcome#index'

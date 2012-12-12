@@ -80,6 +80,11 @@ class YammerController < ApplicationController
     @output = @yammer_client.send(:find_by_id, params[:the_id]) if params[:the_id]
   end # def
 
+  def yammer_open_graph
+    @yammer_client = new_client
+    @output = "You hit yammer_request with #{params.inspect}"
+  end # def
+
   private
 
   def new_client
