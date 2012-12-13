@@ -82,7 +82,22 @@ class YammerController < ApplicationController
 
   def yammer_open_graph
     @yammer_client = new_client
-    @output = "You hit yammer_request with #{params.inspect}"
+    @output = "You hit yammer_open_graph with #{params.inspect}"
+    # Now I should serve a form asking for:
+    # name, email
+  end # def
+
+  # POST
+  def yammer_og_post
+    @yammer_client = new_client
+    og_hash = {:activity=>{:actor=>{:name=>"Bob Smith",
+      :email=>"bob@bot4.us", :url=>nil}, 
+      :action=>"create",
+      :object=>{:url=>"http://bot4.us",
+        :type=>"page", :title=>"Some Traders Make Their Own Luck. We Use a Robot.", :image=>""}},
+      :private=>true, :message=>"", :users=>[]}
+debugger
+    @output = @yammer_client.post('activity', og_hash)
   end # def
 
   private
