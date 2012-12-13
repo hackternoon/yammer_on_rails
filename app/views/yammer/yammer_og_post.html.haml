@@ -2,7 +2,25 @@
 %p Find me in app/views/yammer/yammer_og_post.html.haml
 %hr/
 
-We POSTed some data to Yammer OpenGraph for you.  Here is Yammer's response:
+I just POSTed some data to Yammer Open Graph for you.
+
+%br/
+%br/
+I sent these params to the controller:
+%br/
+%br/
+= debug params
+
+%br/
+%br/
+I sent this hash-object to this call: @yammer_client.post('activity', @og_hash)
+%br/
+%br/
+= debug @og_hash
+%br/
+%br/
+
+Here is Yammer's response:
 
 = debug @output
 

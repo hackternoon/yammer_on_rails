@@ -90,14 +90,25 @@ class YammerController < ApplicationController
   # POST
   def yammer_og_post
     @yammer_client = new_client
-    og_hash = {:activity=>{:actor=>{:name=>"Bob Smith",
-      :email=>"bob@bot4.us", :url=>nil}, 
-      :action=>"create",
-      :object=>{:url=>"http://bot4.us",
-        :type=>"page", :title=>"Some Traders Make Their Own Luck. We Use a Robot.", :image=>""}},
-      :private=>true, :message=>"", :users=>[]}
-debugger
-    @output = @yammer_client.post('activity', og_hash)
+    # A nice feature of the Yammer gem is I dont need to convert my data to JSON.
+    # The gem does that for me.
+    # All I need to do is create a Ruby-hash-object with data in a structure which mirrors
+    # the structure described here:
+    # https://developer.yammer.com/opengraph/
+    # It is convenient that the syntax I use to create a Ruby-hash-object,
+    # is very similar to JSON syntax.
+    @og_hash = 
+      {activity:
+        {actor:
+          {name: params[:yname], email: params[:yemail], url: nil}, 
+         action: "create",
+         object:
+           {url: params[:yurl], type: "page", title: params[:ytitle], image: params[:yimage]}
+        },
+      private: true, message: "", users: []
+      }
+
+    @output = @yammer_client.post('activity', @og_hash)
   end # def
 
   private

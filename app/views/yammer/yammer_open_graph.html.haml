@@ -5,6 +5,19 @@
 = debug @output
 
 =form_tag('yammer_og_post') do
+  Your Name:
   =text_field_tag :yname
+  %br/
+  Your E-Mail:
   =text_field_tag :yemail
+  %br/
+  URL of interesting article:
+  =text_field_tag :yurl
+  %br/
+  Title of this article:
+  =text_field_tag :ytitle
+  %br/
+  URL of interesting image:
+  =text_field_tag :yimage
+  %br/
   =submit_tag 'POST to Yammer OpenGraph'
