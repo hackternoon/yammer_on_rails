@@ -5,7 +5,8 @@
 = debug @output
 
 =form_tag('yammer_og_post') do
-  = select_tag(:crud_action, options_for_select([['Create', 'create'], ['Delete', 'delet']]))
+  - actions = [['Create', 'create'], ['Update','update'], ['Delete', 'delete']]
+  = select_tag(:crud_action, options_for_select(actions))
   %br/
   Your Name:
   =text_field_tag :yname

@@ -101,9 +101,9 @@ class YammerController < ApplicationController
       {activity:
         {actor:
           {name: params[:yname], email: params[:yemail], url: nil}, 
-         action: "create",
-         object:
-           {url: params[:yurl], type: "page", title: params[:ytitle], image: params[:yimage]}
+          action: params[:crud_action],
+          object:
+            {url: params[:yurl], type: "page", title: params[:ytitle], image: params[:yimage]}
         },
       private: true, message: "", users: []
       }
