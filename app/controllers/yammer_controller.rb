@@ -7,7 +7,6 @@ class YammerController < ApplicationController
       'users',
       ['get','users'],
       'suggestions',
-      'current',
       'praise',
       ['group','1038538'],
       'groups',
