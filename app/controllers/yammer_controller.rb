@@ -2,7 +2,6 @@ class YammerController < ApplicationController
 
   def initialize
     @method_list_prod = ['api_endpoint',
-      ['find_by_id','1490093239'],
       ['search','dan'],
       ['messages_from','dan'],
       'users',
@@ -77,7 +76,8 @@ class YammerController < ApplicationController
   def yammer_request
     @yammer_client = new_client
     @output = "You hit yammer_request with #{params.inspect}"
-    @output = @yammer_client.send(:find_by_id, params[:the_id]) if params[:the_id]
+    # find_by_id evaporated from API, not sure why.
+    # @output = @yammer_client.send(:find_by_id, params[:the_id]) if params[:the_id]
   end # def
 
   def yammer_open_graph
