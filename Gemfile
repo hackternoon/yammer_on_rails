@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.9'
+gem 'rails', '3.2.10'
 gem 'jquery-rails'
 gem 'haml','3.2.0.rc.2'
 gem 'haml-rails','0.3.5'
@@ -9,6 +9,7 @@ group :assets do
   gem 'sass-rails',   '3.2.5'
   gem 'coffee-rails', '3.2.2'
   gem 'therubyracer', :platforms => :ruby
+  gem 'libv8',        '3.11.8.4'
   gem 'uglifier',     '1.3.0'
 end
 
