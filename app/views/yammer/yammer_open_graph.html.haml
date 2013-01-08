@@ -4,8 +4,16 @@
 
 = debug @output
 
+You may use this form to POST data to Yammer Open Graph.
+If you send a value for E-Mail which is different than the E-Mail address you used to login, then you should see an error message.
+%br/
+%br/
+Documentation:
+%a(target='y' href='https://developer.yammer.com/opengraph/') https://developer.yammer.com/opengraph/
+%br/
+%br/
 =form_tag('yammer_og_post') do
-  - actions = [['Create', 'create'], ['Update','update'], ['Delete', 'delete']]
+  - actions = [['Create', 'create'], ['Like','like'], ['Update','update'], ['Delete', 'delete']]
   = select_tag(:crud_action, options_for_select(actions))
   %br/
   Your Name:
