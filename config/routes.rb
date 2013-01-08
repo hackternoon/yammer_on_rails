@@ -6,7 +6,7 @@ Yam::Application.routes.draw do
   get 'yammer/request'    => 'yammer#yammer_request'
   get 'yammer/open_graph' => 'yammer#yammer_open_graph'
   post 'yammer/yammer_og_post'   => 'yammer#yammer_og_post'
-
+  get 'yammer/like_button' => 'yammer#like_button'
   get "welcome/index"
   root :to => 'welcome#index'
   resources :authentications

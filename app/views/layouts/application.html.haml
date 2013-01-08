@@ -4,6 +4,8 @@
     %title Yammer API demo
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
+    - # http://developer.yammer.com/connect/
+    = javascript_include_tag 'https://assets.yammer.com/platform/yam.js', 'data-app-id' => ENV['YAMMER_KEY']
     = csrf_meta_tags
   %body
     #links
@@ -16,6 +18,7 @@
       %a(href='/yammer/method_list') /yammer/method_list
       %a(href='/yammer/request')     /yammer/request
       %a(href='/yammer/open_graph')  /yammer/open_graph
+      %a(href='/yammer/like_button') /yammer/like_button
       I use this link to
       %br/
       check on omniauth:

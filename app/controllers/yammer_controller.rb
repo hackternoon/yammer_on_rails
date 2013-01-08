@@ -83,7 +83,7 @@ class YammerController < ApplicationController
     @yammer_client = new_client
     @output = "You hit yammer_open_graph with #{params.inspect}"
     # Now I should serve a form asking for:
-    # name, email
+    # name, email, ...
   end # def
 
   # POST
@@ -110,9 +110,9 @@ class YammerController < ApplicationController
     @output = @yammer_client.post('activity', @og_hash)
   end # def
 
-  def yammer_like_button
+  def like_button
     @yammer_client = new_client
-    @output = "You hit yammer_like_button with #{params.inspect}"
+    @output = "You hit like_button with #{params.inspect}"
     # Now I should serve a yammer like button using info here:
     # https://developer.yammer.com/connect/#connect-embed
   end # def

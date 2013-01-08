@@ -1,0 +1,14 @@
+%h1 Yammer#like_button
+%p Find me in app/views/yammer/like_button.html.haml
+%hr/
+
+= debug @output
+
+:javascript
+  yam.connect.loginButton('#yammer-login', function (resp) { if (resp.authResponse) { document.getElementById('yammer-login').innerHTML = 'Welcome to Yammer!'; } });
+  yam.connect.actionButton({ container: "#embedded-like", network: "bot4.us", action: "like"});
+
+
+%span#yammer-login
+%br/
+%span#embedded-like
