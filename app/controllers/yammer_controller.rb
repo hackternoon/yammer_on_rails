@@ -5,6 +5,7 @@ class YammerController < ApplicationController
       ['search','dan'],
       ['messages_from','dan'],
       'users',
+      'current_networks',
       ['get','users'],
       'suggestions',
       'praise',
