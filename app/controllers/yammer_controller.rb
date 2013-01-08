@@ -102,12 +102,19 @@ class YammerController < ApplicationController
           {name: params[:yname], email: params[:yemail], url: nil}, 
           action: params[:crud_action],
           object:
-            {url: params[:yurl], type: "page", title: params[:ytitle], image: params[:yimage]}
+            {url: params[:yurl], type: params[:object_type], title: params[:ytitle], image: params[:yimage]}
         },
       private: true, message: "", users: []
       }
 
     @output = @yammer_client.post('activity', @og_hash)
+  end # def
+
+  def yammer_like_button
+    @yammer_client = new_client
+    @output = "You hit yammer_like_button with #{params.inspect}"
+    # Now I should serve a yammer like button using info here:
+    # https://developer.yammer.com/connect/#connect-embed
   end # def
 
   private

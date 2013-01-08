@@ -16,13 +16,16 @@ Documentation:
   - actions = [['Create', 'create'], ['Like','like'], ['Update','update'], ['Delete', 'delete']]
   = select_tag(:crud_action, options_for_select(actions))
   %br/
+  - object_types = [['Page (default)', 'page'],['Place','place'],['Person','person'],['Department','department'],['Team','team'],['Project','project'],['Folder','folder'],['File','file'],['Company','company']]
+  = select_tag(:object_type, options_for_select(object_types))
+  %br/
   Your Name:
   =text_field_tag :yname
   %br/
   Your E-Mail:
   =text_field_tag :yemail
   %br/
-  URL of interesting article:
+  URL of interesting thing:
   =text_field_tag :yurl
   %br/
   Title of this article:
